@@ -25,6 +25,7 @@
 }
 .radio {
   margin: 10px;
+  box-sizing: none;
 }
 
 .radio-toolbar input[type="radio"] {
