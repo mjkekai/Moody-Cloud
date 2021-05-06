@@ -19,11 +19,3 @@ $("#myinput").keyup(function() {
     }
 });
 
-
-var upload = "";
-
-function upload() {
-   
-    addEventListener(upload, button) ;
-    localStorage.setItem ("");
-}
