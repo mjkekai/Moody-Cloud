@@ -1,44 +1,247 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 100px;
-  border-radius: 10px;
-  border-color: black;
-  border-style: solid;
-  max-width: 400px;
+/* Need to decide on color scheme, font family. Call variables in CSS with colors/fonts consistently used throughout portfolio
+:root {
+  --color-primary: #;
+  --color-secondary: #;
+  --color-accent: #;
+  --ff-primary:  ;
+  --ff-accent: ;
+} */
+
+/* Border-box width/height include content/padding/border, does not include margin */
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
-.flex-colum {
+/* Setting to 0px for margin/padding allows navigation bar to be right on edge of screen, no extra white space */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation {
+  align-items: center; /* Lines up in center with name */
+  color: #292929;
+  display: flex; /* Use flex to line up navigation side by side */
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  margin-inline: auto;
+  font-size: 24px;
+  margin: 8px;
+}
+
+.navigation-links {
+  height: 100%;
+}
+
+.navigation-links ul {
+  display: flex; /* Lines links up side by side */
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation-links li {
+  list-style: none; /* Removed list style, no underline, no bullets */
+}
+
+.navigation-links li a {
+  color: #292929;
+  display: block;
+  padding: 16px;
+  text-decoration: none; /* Removes underline from links */
+}
+
+.navigation-links li:hover {
+  background-color: #b0b0b0;
+  border-radius: 3px;
+  opacity: 0.75; /* Decreased opacity for hover effect */
+}
+
+/* Hamburger menu for responsive web design */
+.toggle-button {
+  flex-direction: column; /* Span line up on top of one another */
+  display: none; /* Prevents from showing by default, only want it to show when user 'clicks' in smaller screen size */
+  height: 20px;
+  justify-content: space-between;
+  position: absolute; /* Hamburger menu to right side of screen without messing with flow of other elements, element positioned absolutely to first positioned parent */
+  right: 16px; /* Allows space for hamburger menu to not be all the way at the right side of screen */
+  top: 12px; /* Allows space for hamburger menu to not be all the way at the top of the navigation bar */
+  width: 30px;
+}
+
+/* Styles hamburger menu bars */
+.toggle-button .bar {
+  background-color: #292929;
+  border-radius: 3px;
+  height: 3px;
+  width: 100%;
+}
+
+/* Media query when conditions inside are met (screen size <600px run the following code from lines 89-119. */
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  /* Links span 100% of screen */
+  .navigation-links {
+    display: none;
+    width: 100%;
+  }
+
+  /* Change flex direction to column and align at top */
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Stacks links top-bottom, links span 100% of menu */
+  .navigation-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Centers text  */
+  .navigation-links ul li {
+    text-align: center;
+  }
+
+  /* Anchor tags closer in space */
+  .navigation-links li a {
+    padding: 8px 16px;
+  }
+
+  /* Hamburger menu activated by user when clicked on */
+  .navigation-links.active {
+    display: flex;
+  }
+}
+
+.h1 {
+  align-content: center;
+}
+
+h2,
+h3,
+p {
+  color: #292929;
+  margin: 0px;
+  margin-bottom: 16px; /* Gives spacing of text size  */
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+section {
+  padding: 48px 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 1000px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+.profile-picture {
+  border-radius: 3px;
+}
+
+.projects {
   display: flex;
   flex-direction: column;
 }
 
-.flex-center {
-  justify-content: center;
-  align-items: center;
+/* ?? Want project item pictures to wrap if more project images added or screen size begins to shrink ?? */
+.projects {
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+}
+
+@media (min-width: 600px) {
+  .projects {
+    flex-direction: row;
+  }
+
+  .projects > * {
+    flex-basis: 100%;
+    margin-bottom: 16px;
+  }
+
+  /* 12px space between columns. * + * is adjacent sibling selector, takes element div AND sibling div next to it  */
+  .projects > * + * {
+    margin-left: 12px;
+  }
+}
+
+.contact-links {
+  align-content: flex-start;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.contact-links ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.contact-links li {
+  list-style: none; /* Removed list style, no underline, no bullets */
+}
+
+.contact-links li a {
+  color: #292929;
+  padding: 16px;
+  text-decoration: none; /* Removes underline from links */
+}
+
+.contact-links li a:hover {
+  color: #292929;
+  opacity: 0.5;
+}
+
+.flex-colum {
+  display: center;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .justify-center {
   justify-content: center;
 }
+
 .radio {
   margin: 10px;
   box-sizing: none;
+  align-items: stretch;
 }
 
 .radio-toolbar input[type="radio"] {
   opacity: 0;
-  position: fixed;
+  position: absolute;
   width: 0;
   display: none;
+  orientation: horizontal;
 }
 
 .radio label {
-  display: inline-block;
+  display: center;
   background-color: #ddd;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-family: sans-serif, Arial;
   font-size: 16px;
   border: 2px solid #444;
@@ -60,7 +263,15 @@
 
 .comment {
   margin: 0px;
-  width: 100%;
+  width: 150px;
   height: 100px;
   resize: none;
+}
+
+#happy {
+  direction: ltr;
+}
+
+#sad {
+  direction: ltr;
 }
