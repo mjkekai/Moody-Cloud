@@ -1,89 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css"/>
-  <title>Moody Cloud</title>
-  <!-- Adds favicon to title bar -->
-  <link rel="icon" type="image/icon type" href="assets/MoodyCloudLogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moody Cloud</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="icon" type="image/icon type" sizes="75x20" href="assets/MoodyCloudLogo.png">
 </head>
-
-<main> 
-  <nav class="navigation">
-    <div class="logo"><img class="logo-img" src="assets/MoodyCloudLogo.png"></div>
-    <a href="#" class="toggle-button">
-      <!-- 3 span classes represent 3 lines on hamburger menu for responsive navigation bar -->
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navigation-links">
-      <ul>
-        <li><a href="#Weather">Weather</a></li>
-        <li><a href="#Journal">Journal</a></li>
-        <li><a href="#Pixabay">Pixabay</a></li>
-      </ul>
-    </div>
-    </nav>
-</main>
-
 <body>
-    <section>
-        <div class="title-container">
-            <h2 class="text-center">MOODY CLOUD</h2>
+
+    <nav class="navigation">
+      <div><img class="logo-img" src="assets/MoodyCloudLogo.png"></div>
+      <a href="#" class="toggle-button">
+        <!-- 3 span classes represent 3 lines on hamburger menu for responsive navigation bar -->
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navigation-links">
+        <ul>
+          <li><a href="#Weather">Weather</a></li>
+          <li><a href="#Journal">Journal</a></li>
+          <li><a href="#Pixabay">Pixabay</a></li>
+        </ul>
+      </div>
+      </nav>
+      
+    <br>
+
+    <div>
+      <h1 class="moodycloud">Moody Cloud</h1>
+    </div>
+    
+    <br><br><br><br>
+
+    <main class="grid-parent">
+      <section class="content-left">
+        <h2 class="boxtitle">Weather Forecast</h2>
+        
+        <div class="weather">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum cum repudiandae neque vero est omnis.</p>
+          <img class="extendedforecast" src="https://via.placeholder.com/150x200" alt="Today's weather">
+          <img class="extendedforecast" src="https://via.placeholder.com/150x200" alt="Tomorrow's weather">
+          <img class="extendedforecast" src="https://via.placeholder.com/150x200" alt="The following days weather">
         </div>
-    </section>
-  <section>
-    <div class="container">
-      <div class="flex-items">
-        <div>
-          <h2 class="text-center">Weather</h2>
-          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque mollitia quas quos, sit recusandae?</p>
-          <div>
-            <img class="projects" src="https://via.placeholder.com/250" alt="Weather Forecast 1">
-          </div><br>
-          <div>
-            <img class="projects" src="https://via.placeholder.com/250" alt="Weather Forecast 2">
-          </div><br>
-          <div>
-            <img class="projects" src="https://via.placeholder.com/250" alt="Weather Forecast 3">
-          </div> <br>
-          <div>
-            <img class="projects" src="https://via.placeholder.com/250" alt="Weather Forecast 4">
-          </div>
+      </section>
+  
+      <section class="content-right">
+        <h2 class="boxtitle">Journal</h2>
+        <div class="journal-entry">
+          <img src="https://via.placeholder.com/350x250" alt="Journal entry">
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section>
-    <div class="container">
-      <div class="flex-items">
-        <h2 class="text-center">Emoticons and Journal</h2>
-        <h3 class="text-center">How are you feeling today?</h3>
-        <div>
-          <img class="projects" src="https://via.placeholder.com/250" alt="Emoticons">
-        </div><br>
-      </div>
-    </div>
-  </section>
+      <section class="content-left">
+        <h2 class="boxtitle">Image Search</h2>
+        <div class="pixabay-images">
+          <img src="https://via.placeholder.com/250x200" alt="Pixabay photo">
+          <img src="https://via.placeholder.com/250x200" alt="Pixabay photo">
+          <img src="https://via.placeholder.com/250x200" alt="Pixabay photo">
+          <img src="https://via.placeholder.com/250x200" alt="Pixabay photo">
+        </div>
+      </section>
+  
+      <section class="content-right">
+        <h2 class="boxtitle">????</h2>
+        <div class="projects">
+          <img src="https://via.placeholder.com/250" alt="Content">
 
-
-  <section>
-    <div class="container">
-      <div class="flex-items">
-          <h2 class="text-center">Pixabay</h2>
-      <div>
-        <img class="projects" src="https://via.placeholder.com/250" alt="Pixabay">
-      </div>
-      </div>
-    </div>
-  </section>
-
+        </div>
+      </section>
+    </main>
+  
 
     <script src="script.js"></script>
 </body>
