@@ -21,7 +21,8 @@ html {
   
   .moodycloud {
     text-align: center;
-    font-size: 42px;
+    font-size: 56px;
+    font-weight: 500;
   }
 
   .navigation {
@@ -66,7 +67,11 @@ html {
   }
   
   .navigation-links li a:hover {
-      text-decoration: underline;
+      background-color: #ffffff;
+      opacity: 0.2;
+      transition: .2s;
+      border-radius: 10px;
+      object-fit: cover;
   }
   
   .toggle-button {
