@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Day Weather Forecast</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Three day Weather Forecast</h1>
+    <main>
+      <h3>City Search</h3>
+      <form>
+      <div id="search-city"></div>
+        <input type="search" id="city-input">
+        <input type="submit" id="city-button">
+      </div>
+      </form>
+      <div id="two-day-forecast">
+        <h3>Next 2 days:</h3>
+        <div id="forecasting">
+          <span id="current-weather" class="forecast-slots">
+            <div class="date-forcast"></div>
+            <img class="weather-icon">
+            <div class="current--temperature"></div>
+          </span>
+          <span id="forcast-next-day" class="forecast-slots">
+            <div class="date-forcast"></div>
+            <img class="weather-icon-forcast">
+            <div class="tmp-forecast"></div>
+            <span id="forcast-next-day-after" class="forecast-slots">
+              <div class="date-forcast"></div>
+              <img class="weather-icon-forecast">
+              <div class="forecast-tmp"></div>
+          </span>
+          </span>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
