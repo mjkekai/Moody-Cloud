@@ -43,13 +43,7 @@
 
 ## Images
 
-![Moody Cloud colorful pinwheel logo](assets/images/MoodyCloudLogo.png)
-
-![Desktop wireframe in grayscale](assets/images/Wireframe-Desktop-Grayscale.png)
-
-![Mobile wireframe in grayscale](assets/images/Wireframe-Mobile-Grayscale.png)
-
-![Mobile wireframe in color](assets/images/Wireframe-Mobile-Color.png)
+![MoodyCloudLogo](https://user-images.githubusercontent.com/80286426/117523516-a20d2a80-af6d-11eb-9531-2bc0c42ad562.png) <img width="500" alt="Wireframe-Desktop-Grayscale" src="https://user-images.githubusercontent.com/80286426/117523518-a6394800-af6d-11eb-9479-ec2f88bc3479.png"> <img width="150" alt="Wirerame-Mobile-Grayscale" src="https://user-images.githubusercontent.com/80286426/117523552-de408b00-af6d-11eb-8d37-903ed47be377.png"> <img width="150" alt="Wireframe-Mobile-Color" src="https://user-images.githubusercontent.com/80286426/117523563-ee586a80-af6d-11eb-9112-47634d05309f.png">
 
 
 ## Animation for Responsive Layout
