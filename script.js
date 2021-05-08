@@ -12,11 +12,15 @@ var forecastNextDayAfter = $('#forecast-next-day-after')
 // 
 function getWeatherByCity () {
     var city = document.getElementById("city-input").value;
+    var date = document.getElementById('date-forecast');
     $.ajax({
         url: 'https://api.weatherstack.com/forecast',
         data: {
           access_key: access_key,
           query: city,
+          forecast_days: '2'
+
+          
 
         },
         dataType: 'json',
@@ -33,6 +37,20 @@ function displayForecast(data) {
     // $('#forecast-day-after-next-day').append(JSON.stringify(data.current.temperature + " °c"));
     }
     
+
+
+
+
+
+// function displayForecast(data) {
+//     console.log(data); // display data here
+//     $('#forecast-day-2').append(JSON.stringify(data.forecast.date.avgtemp));
+    
+
+
+
+
+// } 
 searchCityButton.on('click', function(e){
     e.preventDefault();
     getWeatherByCity();
