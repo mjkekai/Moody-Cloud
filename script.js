@@ -29,8 +29,8 @@ function displayForecast(data) {
     console.log(data); // display data here'
    
     $('#current-temperature').append(JSON.stringify(data.current.temperature + " °c"));
-    $('#weather-descriptions').append(JSON.stringify(data.current.weather_descriptions))
-    $('#weather-icon').append(JSON.stringify(data.current.weather_icons[0]))
+    // $('#forecast-next-day').append(JSON.stringify(data.current.temperature + " °c"));
+    // $('#forecast-day-after-next-day').append(JSON.stringify(data.current.temperature + " °c"));
     }
     
 searchCityButton.on('click', function(e){

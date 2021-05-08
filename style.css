@@ -42,15 +42,15 @@ main #two-day-forecast h3 {
 main #two-day-forecast #forecasting {
     display: flex;
     flex-flow: row wrap;
-    align-items: stretch;
+    align-items:center;
 }
 main #two-day-forecast #forecasting .forecast-slots {
     display: inline-block;
-    margin: 100px;
-    padding: 100px;
-    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    width: 20px;
     min-height: 100px;
-    border: 1px solid black;
-    border-radius: 0.5rem;
+    border: 2px solid black;
+    border-radius: 1px;
     text-align: center;
 }
