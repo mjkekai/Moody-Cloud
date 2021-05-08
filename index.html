@@ -1,30 +1,3 @@
-
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
-<body>
-    <div class="container ">
-        <h1 class="display-1" style="align-content: center;">Moody Cloud Gallery</h1>
-<input type="text" id="myinput" name="search" placeholder="search..." ><br>
-<div  id="images">
-            <a href="#"></a><img src="./images/a.jpeg" alt="a" width=130></a>
-            <a href="#"><img src="./images/b.jpeg" alt="b" width=130></a>
-            <a href="#"><img src="./images/c.jpeg" alt="c" width=130></a>
-            <a href="#"><img src="./images/d.jpeg" alt="d" width=130></a>
-            <a href="#"><img src="./images/e.jpeg" alt="e" width=130></a>
-            <a href="#"><img src="./images/f.jpeg" alt="f" width=130></a>
-</div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
-<script src="./script.js"></script>
-<script src="./upload2.js"></script>
-</body>
-</html>
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Moody Cloud</title>
-    
+  
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/journalstyle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/weatherstyle.css" />
     
     <link rel="icon" type="image/icon type" sizes="75x20" href="assets/MoodyCloudLogo.png">
 </head>
@@ -46,7 +21,7 @@
     <nav class="navigation">
       <div><img class="logo-img" src="assets/MoodyCloudLogo.png"></div>
       <a href="#" class="toggle-button">
-       
+        <!-- 3 span classes represent 3 lines on hamburger menu for responsive navigation bar -->
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -66,21 +41,47 @@
       <h1 class="moodycloud">Moody Cloud</h1>
     </div>
     
-    <br><br><br>
+    <br><br><br><br>
 
     <main class="grid-parent">
       <section class="content-left-weather">
         <h2 class="boxtitle"><a name= "Weather"> Weather Forecast</a></h2>
         <br>
         <div class="weather">
-          <img class="extendedforecast" src="https://via.placeholder.com/150x200" alt="Today's weather">
-          <img class="extendedforecast" src="https://via.placeholder.com/150x200" alt="Tomorrow's weather">
-          <img class="extendedforecast" src="https://via.placeholder.com/150x200" alt="The following days weather">
-        </div>
+        </form>
+        <div id="two-day-forecast">
+          
+          <h3>Today's Forecast:</h3>
+          <h3>City Search</h3>
+          <form>
+          <div id="search-city"></div>
+            <input type="search" id="city-input">
+            <input type="submit" id="city-button">
+          </div>
+          </form>
+          <div id="two-day-forecast">
+          
+            <div id="forecasting">
+              <span id="current-weather" class="forecast-slots">
+                <div id="weather-descriptions"></div>
+                <img id="weather-icon">
+                <div id="current-temperature"></div>
+                  <!-- <span id="forecast-next-day" class="forecast-slots">
+                    <div id="weather-descriptions"></div>
+                    <img id="weather-icon">
+                    <div id="current-temperature"></div>
+                      <span id="forecast-day-after-next" class="forecast-slots">
+                        <div id="weather-descriptions"></div>
+                        <img id="weather-icon">
+                        <div id="current-temperature"></div> -->
+              </span>
+              </span>
+            </div>
+          </div>
       </section>
   
       <section class="content-right">
-       
+        <!-- <h2 class="boxtitle"> Daily Journal</h2> -->
         <main>
           <div id="home" class="flex-colum flex-center">
             <h1><a name= "Journal">Daily Journal</a> </h1>
@@ -90,7 +91,7 @@
               <p>How are you feeling today??</p>
               <div class="radio">
                 <fieldset>
-                  <i class="far fa-smile-wink"></i>
+          
                   <input
                     type="radio"
                     id="happy"
@@ -105,11 +106,8 @@
                   type="checkbox"
                   class="btn-check"
                   id="btn-check-outlined"
-                  autocomplete="off"
-                />
-                <label class="btn btn-outline-primary" for="btn-check-outlined"
-                  >Single toggle</label
-                ><br />
+                  autocomplete="off"/>
+
     
                 <input type="radio" id="sad" name="feeling" value="sad" />
                 <label for="sad">sad</label>
@@ -143,7 +141,7 @@
       <section class="content-left">
         <h2 class="boxtitle"><a name="Pixabay">Moody Cloud Photos</a> </h2>
         <br>
-      <div class="imagesearch">  
+      <div class="imagesearch"> 
       <input type="text" id="myinput" name="search" placeholder="search..."><br>
       <div id="images">
               <a href="#"><img src="./assets/images/a.jpeg" alt="a" width=160></a>
@@ -155,16 +153,19 @@
       </div>
       </div>
     </section>
-    </main>
 
+  
+    
+
+
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/Photoscript.js"></script>
-    <script src="./assets/js/journalscript.js"></script>
+     <script src="./assets/js/journalscript.js"></script>
 </body>
 </html>
-<main/>
