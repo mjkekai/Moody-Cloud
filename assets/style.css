@@ -1,277 +1,174 @@
-/* Need to decide on color scheme, font family. Call variables in CSS with colors/fonts consistently used throughout portfolio
-:root {
-  --color-primary: #;
-  --color-secondary: #;
-  --color-accent: #;
-  --ff-primary:  ;
-  --ff-accent: ;
-} */
-
-/* Border-box width/height include content/padding/border, does not include margin */
-* {
-  box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
-}
-
-/* Setting to 0px for margin/padding allows navigation bar to be right on edge of screen, no extra white space */
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-.navigation {
-  align-items: center; /* Lines up in center with name */
-  color: #292929;
-  display: flex; /* Use flex to line up navigation side by side */
-  justify-content: space-between;
-  position: relative;
-}
-
-.logo {
-  margin-inline: auto;
-  font-size: 24px;
-  margin: 8px;
-}
-
-.navigation-links {
-  height: 100%;
-}
-
-.navigation-links ul {
-  display: flex; /* Lines links up side by side */
-  margin: 0px;
-  padding: 0px;
-}
-
-.navigation-links li {
-  list-style: none; /* Removed list style, no underline, no bullets */
-}
-
-.navigation-links li a {
-  color: #292929;
-  display: block;
-  padding: 16px;
-  text-decoration: none; /* Removes underline from links */
-}
-
-.navigation-links li:hover {
-  background-color: #b0b0b0;
-  border-radius: 3px;
-  opacity: 0.75; /* Decreased opacity for hover effect */
-}
-
-/* Hamburger menu for responsive web design */
-.toggle-button {
-  flex-direction: column; /* Span line up on top of one another */
-  display: none; /* Prevents from showing by default, only want it to show when user 'clicks' in smaller screen size */
-  height: 20px;
-  justify-content: space-between;
-  position: absolute; /* Hamburger menu to right side of screen without messing with flow of other elements, element positioned absolutely to first positioned parent */
-  right: 16px; /* Allows space for hamburger menu to not be all the way at the right side of screen */
-  top: 12px; /* Allows space for hamburger menu to not be all the way at the top of the navigation bar */
-  width: 30px;
-}
-
-/* Styles hamburger menu bars */
-.toggle-button .bar {
-  background-color: #292929;
-  border-radius: 3px;
-  height: 3px;
-  width: 100%;
-}
-
-/* Media query when conditions inside are met (screen size <600px run the following code from lines 89-119. */
-@media (max-width: 600px) {
-  .toggle-button {
-    display: flex;
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    height: 100%; 
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    color: #ffffff;
+    margin: 0px;
+    padding: 20px;
+    line-height: 1.4;
+  }
+  
+  .moodycloud {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 500;
   }
 
-  /* Links span 100% of screen */
-  .navigation-links {
-    display: none;
-    width: 100%;
-  }
-
-  /* Change flex direction to column and align at top */
   .navigation {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center; 
+    color: #ffffff;
+    display: flex; 
+    justify-content: space-between;
+    position: relative;
   }
-
-  /* Stacks links top-bottom, links span 100% of menu */
+  
+  .logo-img {
+      inline-size: auto;
+      height: 55%;
+      width: 55%;
+  }
+  
+  .logo-img:hover {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.75s ease-in-out 0s;
+  }
+  
+  .navigation-links {
+    height: 100%;
+  }
+  
   .navigation-links ul {
-    flex-direction: column;
+    display: flex; 
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .navigation-links li {
+    list-style: none; 
+  }
+  
+  .navigation-links li a {
+    color: #ffffff;
+    display: block;
+    padding: 16px;
+    text-decoration: none; 
+  }
+  
+  .navigation-links li a:hover {
+      background-color: #ffffff;
+      opacity: 0.2;
+      transition: .2s;
+      border-radius: 10px;
+      object-fit: cover;
+  }
+  
+  .toggle-button {
+    flex-direction: column; 
+    display: none; 
+    height: 20px;
+    justify-content: space-between;
+    position: absolute; 
+    right: 16px; 
+    top: 12px; 
+    width: 30px;
+  }
+  
+  .toggle-button .bar {
+    background-color: #ffffff;;
+    border-radius: 3px; 
+    height: 3px;
     width: 100%;
   }
+  
+  /* Media query when conditions inside are met */
+  @media (max-width: 700px) {
+    .toggle-button {
+      display: flex;
+    }
+  
+    .navigation-links {
+      display: none;
+      width: 100%;
+    }
+  
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navigation-links ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navigation-links ul li {
+      text-align: center;
+    }
+  
+    .navigation-links li a {
+      padding: 8px 16px;
+    }
+  
+    .navigation-links.active {
+      display: flex;
+    }
+  }
+  
+  .boxtitle {
+    text-align: center;
+    font-size: 34px;
+  }
+  
+  .weather, .journal-entry, .pixabay-images {
+    text-align: center;
+  }
+  
 
-  /* Centers text  */
-  .navigation-links ul li {
+  .imagesearch {
     text-align: center;
   }
 
-  /* Anchor tags closer in space */
-  .navigation-links li a {
-    padding: 8px 16px;
+  img {
+    border-radius: 6px;
+    margin-top: 7px;
+    margin-right: 10px;
   }
-
-  /* Hamburger menu activated by user when clicked on */
-  .navigation-links.active {
-    display: flex;
+  
+  .content-left, .content-left-weather, .content-right {
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    padding: 50px;
+    border-radius: 12px;
   }
-}
-
-.h1 {
-  align-content: center;
-}
-
-h2,
-h3,
-p {
-  color: #292929;
-  margin: 0px;
-  margin-bottom: 16px; /* Gives spacing of text size  */
-}
-
-body {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-section {
-  padding: 48px 0;
-}
-
-.container {
-  margin-inline: auto;
-  width: min(90%, 1000px);
-}
-
-.text-center {
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 3px;
-}
-
-.profile-picture {
-  border-radius: 3px;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ?? Want project item pictures to wrap if more project images added or screen size begins to shrink ?? */
-.projects {
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-flow: column wrap;
-}
-
-@media (min-width: 600px) {
-  .projects {
-    flex-direction: row;
+  
+  /* Media query for smartphone, tablet, and desktop */
+  .grid-parent {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  } 
+  
+  @media (min-width: 900px) {
+    .grid-parent {
+        grid-template-columns: 1fr 1fr;
+    }
   }
-
-  .projects > * {
-    flex-basis: 100%;
-    margin-bottom: 16px;
+  
+  @media (min-width: 900px) {
+    .content-left {
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr;
+    }
   }
-
-  /* 12px space between columns. * + * is adjacent sibling selector, takes element div AND sibling div next to it  */
-  .projects > * + * {
-    margin-left: 12px;
-  }
-}
-
-.contact-links {
-  align-content: flex-start;
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.contact-links ul {
-  margin: 0px;
-  padding: 0px;
-}
-
-.contact-links li {
-  list-style: none; /* Removed list style, no underline, no bullets */
-}
-
-.contact-links li a {
-  color: #292929;
-  padding: 16px;
-  text-decoration: none; /* Removes underline from links */
-}
-
-.contact-links li a:hover {
-  color: #292929;
-  opacity: 0.5;
-}
-
-.flex-colum {
-  display: center;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.radio {
-  margin: 10px;
-  box-sizing: none;
-  align-items: stretch;
-}
-
-.radio-toolbar input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-  width: 0;
-  display: none;
-  orientation: horizontal;
-}
-
-.radio label {
-  display: center;
-  background-color: #ddd;
-  padding: 5px 10px;
-  font-family: sans-serif, Arial;
-  font-size: 16px;
-  border: 2px solid #444;
-  border-radius: 4px;
-}
-
-.radio label:hover {
-  background-color: #dfd;
-}
-
-.radio input[type="radio"]:focus + label {
-  border: 2px dashed #444;
-}
-
-.radio input[type="radio"]:checked + label {
-  background-color: #bfb;
-  border-color: #4c4;
-}
-
-.comment {
-  margin: 0px;
-  width: 150px;
-  height: 100px;
-  resize: none;
-}
-
-#happy {
-  direction: ltr;
-}
-
-#sad {
-  direction: ltr;
-}
