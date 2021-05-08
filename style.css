@@ -1,0 +1,180 @@
+body {
+    background-image: url(back_wall.jpg);
+  }
+  
+  .container {
+    width: 800px;
+    height: 500px;
+    margin: 25vh auto;
+    border-radius: 25px;
+    opacity: 0.8;
+    box-shadow: 0 20px 40px 0px rgba(0, 0, 0, 0.3)
+  }
+  
+  .header {
+    height: 15%;
+    background-color: #66b3ff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    text-align: center;
+    position: relative;
+  }
+  
+  #temp,
+  #humidity-div,
+  #wind,
+  #wind-direction,
+  #barometric-div {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
+    color: #001a33;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .city-icon-holder {
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #city-name {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #00334d;
+  }
+  
+  #condition {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00334d;
+  }
+  
+  #icon {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+  
+  #main {
+    width: 100%;
+    height: 70%;
+    position: relative;
+  }
+  
+  .city-icon {
+    height: 80%;
+    width: 40%;
+    background-color: #cce6ff;
+  }
+  
+  .temperature {
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    height: 20%;
+    width: 60%;
+    background-color: #b3e6ff;
+  }
+  
+  .humidity {
+    height: 20%;
+    width: 60%;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    background-color: #b3fff0;
+  }
+  
+  .wind-speed {
+    height: 20%;
+    width: 60%;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    background-color: #adc2eb;
+  }
+  
+  .barometric-pressure {
+    height: 20%;
+    width: 60%;
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    background-color: #ccccff;
+  }
+  
+  .forecast_day_f {
+    height: 42%;
+    width: 33%;
+    position: absolute;
+    left: 0%;
+    top: 80%;
+    background-color: #cd86ff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  .forecast_day_s {
+    height: 42%;
+    width: 33%;
+    position: absolute;
+    left: 33.5%;
+    top: 80%;
+    background-color: #cd86ff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  .forecast_day_t {
+    height: 42%;
+    width: 33%;
+    position: absolute;
+    left: 67%;
+    top: 80%;
+    background-color: #cd86ff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  #icon_f,
+  #icon_s,
+  #icon_t {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+  
+  #search-btn {
+    width: 40px;
+    height: 40px;
+    color: #eee;
+  }
+  
+  #search-txt {
+    color: 003399;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+    padding-right: 1px;
+    padding-left: 1px;
+    text-align: center;
+  }
+  
+  .search {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
