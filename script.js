@@ -37,7 +37,21 @@ function getWeatherByCity () {
 } 
 function displayForecast(data) {
     console.log(data); // display data here
+    $('#current-weather').append(JSON.stringify(data.current.temperature));
     
+
+
+
+
+} 
+function displayForecast(data) {
+    console.log(data); // display data here
+    $('#forecast-day-2').append(JSON.stringify(data.forecast.date.avgtemp));
+    
+
+
+
+
 } 
 searchCityButton.on('click', function(e){
     e.preventDefault();
