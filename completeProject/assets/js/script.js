@@ -1,29 +1,57 @@
-/* Grabs toggle-button class for hamburger menu */ 
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-
-/* Grabs navigation links. Returns array index of 0 b/c only one navigation-links on page */ 
-const navigationLinks = document.getElementsByClassName('navigation-links')[0]
-
-/* Added event listener so when user clicks the 'toggle-button' aka hamburger menu, it runs the following function: */
-toggleButton.addEventListener('click', () => {
-    /* Toggles between hide() and show() for the selected hamburger menu */
-    navigationLinks.classList.toggle('active')
-})
+// API KEY
 const access_key = "95a73e7c7b18b33bcc43679334309c1d";
-// stuff
-var cities = {}
-var cityHist = {}
-
+// city search function
 var searchCityInput = $('#city-input')
 var searchCityButton = $('#city-button')
-
-
-var cityListing = $('#city-list')
-var weatherIconCurrent = $('#weather-icon-current')
-var dateDisplay = $('#date-display')
-var temperature = $('#current-temperture')
 
 
 
 var currentWeather = $('#current-weather')
 var forecastNextDay = $('#forecast-next-day')
+var forecastNextDayAfter = $('#forecast-next-day-after')
+// 
+function getWeatherByCity () {
+    var city = document.getElementById("city-input").value;
+    var date = document.getElementById('date-forecast');
+    $.ajax({
+        url: 'https://api.weatherstack.com/forecast',
+        data: {
+          access_key: access_key,
+          query: city,
+          forecast_days: '2'
+
+          
+
+        },
+        dataType: 'json',
+        success: function(data) {
+            displayForecast(data)
+        }
+      });
+} 
+function displayForecast(data) {
+    console.log(data); // display data here'
+   
+    $('#current-temperature').append(JSON.stringify(data.current.temperature + " °c"));
+    // $('#forecast-next-day').append(JSON.stringify(data.current.temperature + " °c"));
+    // $('#forecast-day-after-next-day').append(JSON.stringify(data.current.temperature + " °c"));
+    }
+    
+
+
+
+
+
+// function displayForecast(data) {
+//     console.log(data); // display data here
+//     $('#forecast-day-2').append(JSON.stringify(data.forecast.date.avgtemp));
+    
+
+
+
+
+// } 
+searchCityButton.on('click', function(e){
+    e.preventDefault();
+    getWeatherByCity();
+});

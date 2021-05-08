@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@media screen and (max-width: 960px) {
+  aside {
+    width: 100%;
+    margin: 0 auto imp !important;
+  }
+  aside #search-city {
+    display: flex;
+  }
+  aside #search-city #city-input {
+    flex: 1 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #forecasting {
+    flex-flow: column nowrap;
+  }
+  #forecasting {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #777;
+  color: #aaa;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main #search-box {
+  padding: 0.25rem;
+}
+
+main #two-day-forecast h3 {
+  margin: 0.5rem 1rem;
+}
+main #two-day-forecast #forecasting {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+main #two-day-forecast #forecasting .forecast-slots {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  width: 100px;
+  min-height: 100px;
+  border: 2px solid black;
+  border-radius: 1px;
+  text-align: center;
+}
