@@ -48,8 +48,8 @@
 
 ## Animation for Responsive Layout
 
-* TBD
-
+[Screen Recording 2021-05-08 at 1.06.13 PM.zip](https://github.com/mjkekai/Moody-Cloud/files/6446485/Screen.Recording.2021-05-08.at.1.06.13.PM.zip)
+<img width="1440" alt="Screen Shot 2021-05-08 at 1 03 50 PM" src="https://user-images.githubusercontent.com/78839909/117552096-56569180-affe-11eb-9c83-fbe3cd36d76e.png">
 
 ## Credits & Tasks
 
